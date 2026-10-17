@@ -11,7 +11,10 @@ return {
   ---@module 'blink.cmp'
   ---@type blink.cmp.Config
   opts = {
-    keymap = { preset = 'default' },
+    keymap = { 
+		preset = 'default',
+		 ["<CR>"] = { "accept", "fallback" },
+	    },
     completion = { documentation = { auto_show = false } },
     sources = { default = { 'lsp', 'path', 'snippets', 'buffer' } },
     fuzzy = { implementation = "rust" }
